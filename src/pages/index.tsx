@@ -6,6 +6,8 @@ import Card from "../components/Card/Card";
 import Grid from "../components/Grid/Grid";
 import { CardInterface } from "../interface/Card.interface";
 import styles from "../styles/Home.module.scss";
+import { SiAboutdotme } from "react-icons/si";
+import { FiLogIn } from "react-icons/fi";
 
 const data: CardInterface[] = [
   {
@@ -113,14 +115,24 @@ const Home: NextPage = () => {
           Get started by editing{" "}
           <code className={styles.code}>pages/index.tsx</code>
         </p>
-        <Button
-            {...{
-              destiny: "about",
-              text: "About",
-              icon: "fas fa-info-circle",
-              status: "active",
-            }}
-          />
+        <Button data={
+          {
+            destiny: "/about",
+            status: "primary",
+            text: "About"
+          }
+        }>
+          <SiAboutdotme />
+        </Button>
+        <Button data={
+          {
+            destiny: "/login",
+            status: "secondary",
+            text: "Login"
+          }
+        }>
+          <FiLogIn />
+        </Button>
         <Grid>
           {data.map((item, index) => (
             <Card key={index} {...item} />

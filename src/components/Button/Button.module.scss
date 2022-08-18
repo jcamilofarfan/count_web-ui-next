@@ -6,6 +6,10 @@
     border-radius: 10px;
     background-color: $color-secondary-1-1;
     color: $color-secondary-1-4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+    transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .button:hover,
@@ -16,6 +20,3 @@
     cursor: pointer;
 }
 
-.icon{
-    color: $color-secondary-1-0;
-}
