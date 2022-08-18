@@ -5,7 +5,7 @@ interface props {
     children: any;
 }
 
-const Grid: FC<props> = ({ children, ...props }) => {
+const Grid: FC<props> = ({ children }) => {
     return (
         <div className={styles.grid}>
             {children}

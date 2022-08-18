@@ -1,13 +1,8 @@
 .grid {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 800px;
-}
-@media (max-width: 600px) {
-    .grid {
-        width: 100%;
-        flex-direction: column;
-    }
+    max-width: 90%;
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem;
+    grid-auto-rows: minmax(0, 10rem);
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
 }

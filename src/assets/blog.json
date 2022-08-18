@@ -1,0 +1,38 @@
+{"data": [
+    {
+        "title": "Documentation",
+        "description": "Find in-depth information about Next.js features and API.",
+        "link": "https://nextjs.org/docs",
+        "id": 1
+    },
+    {
+        "title": "Learn",
+        "description": "Learn about Next.js in an interactive course with quizzes!",
+        "link": "https://nextjs.org/learn",
+        "id": 2
+    },
+    {
+        "title": "Examples",
+        "description": "Discover and deploy boilerplate example Next.js projects.",
+        "link": "https://nextjs.org/examples",
+        "id": 3
+    },
+    {
+        "title": "Deploy",
+        "description": "Deploy your Next.js site to a public URL with Vercel.",
+        "link": "https://nextjs.org/deploy",
+        "id": 4
+    },
+    {
+        "title": "Stack",
+        "description": "Find out what\"s included in a Next.js app.",
+        "link": "https://nextjs.org/stack",
+        "id": 5
+    },
+    {
+        "title": "Blog",
+        "description": "The Next.js blog.",
+        "link": "https://nextjs.org/blog",
+        "id": 6
+    }
+]}

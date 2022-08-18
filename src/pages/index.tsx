@@ -1,29 +1,99 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import Card from '../components/Card/Card'
-import Grid from '../components/Grid/Grid'
-import { CardInterface } from '../interface/Card.interface'
-import styles from '../styles/Home.module.scss'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import Button from "../components/Button/Button";
+import Card from "../components/Card/Card";
+import Grid from "../components/Grid/Grid";
+import { CardInterface } from "../interface/Card.interface";
+import styles from "../styles/Home.module.scss";
 
-const data: CardInterface[]= [{
-  title: 'Documentation',
-  description: 'Find in-depth information about Next.js features and API.',
-  link: 'https://nextjs.org/docs',
-  id: 1
-},
-{
-  title: 'Learn',
-  description: 'Learn about Next.js in an interactive course with quizzes!',
-  link: 'https://nextjs.org/learn',
-  id: 2
-},
-{
-  title: 'Examples',
-  description: 'Discover and deploy boilerplate example Next.js projects.',
-  link: 'https://nextjs.org/examples',
-  id: 3
-}]
+const data: CardInterface[] = [
+  {
+    title: "Documentation",
+    description:
+      "Find in-depth information about Next.js features and API. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    link: "https://nextjs.org/docs",
+    id: 1,
+  },
+  {
+    title: "Learn",
+    description: "Learn about Next.js in an interactive course with quizzes!",
+    link: "https://nextjs.org/learn",
+    id: 2,
+  },
+  {
+    title: "Examples",
+    description: "Discover and deploy boilerplate example Next.js projects.",
+    link: "https://nextjs.org/examples",
+    id: 3,
+  },
+  {
+    title: "Deploy",
+    description: "Deploy your Next.js site to a public URL with Vercel.",
+    link: "https://nextjs.org/deploy",
+    id: 4,
+  },
+  {
+    title: "Stack",
+    description: 'Find out what"s included in a Next.js app.',
+    link: "https://nextjs.org/stack",
+    id: 5,
+  },
+  {
+    title: "Blog",
+    description: "The Next.js blog.",
+    link: "https://nextjs.org/blog",
+    id: 6,
+  },
+  {
+    title: "Twitter",
+    description: "Follow Next.js on Twitter.",
+    link: "https://twitter.com/nextjs",
+    id: 7,
+  },
+  {
+    title: "GitHub",
+    description: "Find and contribute to Next.js on GitHub.",
+    link: "https://github.com/nextjs",
+    id: 8,
+  },
+  {
+    title: "Discord",
+    description: "Join the Next.js Discord community.",
+    link: "https://discord.gg/nextjs",
+    id: 9,
+  },
+  {
+    title: "YouTube",
+    description: "Watch Next.js videos on YouTube.",
+    link: "https://www.youtube.com/channel/UCWy-YrjdiV0-qJZRjI7qwzg",
+    id: 10,
+  },
+  {
+    title: "Twitter",
+    description: "Follow Next.js on Twitter.",
+    link: "https://twitter.com/nextjs",
+    id: 11,
+  },
+  {
+    title: "GitHub",
+    description: "Find and contribute to Next.js on GitHub.",
+    link: "https://github.com/nextjs",
+    id: 12,
+  },
+  {
+    title: "Discord",
+    description: "Join the Next.js Discord community.",
+    link: "https://discord.gg/nextjs",
+    id: 13,
+  },
+  {
+    title: "YouTube",
+    description: "Watch Next.js videos on YouTube.",
+    link: "https://www.youtube.com/channel/UCWy-YrjdiV0-qJZRjI7qwzg",
+    id: 14,
+  },
+];
 
 const Home: NextPage = () => {
   return (
@@ -40,16 +110,22 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          Get started by editing{" "}
           <code className={styles.code}>pages/index.tsx</code>
         </p>
-
+        <Button
+            {...{
+              destiny: "about",
+              text: "About",
+              icon: "fas fa-info-circle",
+              status: "active",
+            }}
+          />
         <Grid>
           {data.map((item, index) => (
             <Card key={index} {...item} />
           ))}
         </Grid>
-
       </main>
 
       <footer className={styles.footer}>
@@ -58,14 +134,14 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
