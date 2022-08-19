@@ -24,7 +24,7 @@ const NavBar= (props: any) => {
                     </Button>
                     <Button
                         data={{
-                            destiny: "/singup",
+                            destiny: "/auth/singup",
                             status: "secondary",
                             text: "REGISTRO"
                         }}
@@ -32,7 +32,7 @@ const NavBar= (props: any) => {
                     </Button>
                     <Button
                         data={{
-                            destiny: "/login",
+                            destiny: "/auth",
                             status: "primary",
                             text: "INICIAR SESIÓN"
                         }}
