@@ -1,14 +1,10 @@
 @import "../../styles/colors.scss";
 .button{
-    width: 100%;
-    padding: 1.5rem;
+    width: auto;
+    padding: 0.7rem;
+    margin: 0 1.5rem;
     text-align: center;
     border-radius: 10px;
-    background-color: $color-secondary-1-1;
-    color: $color-secondary-1-4;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 0.5rem;
     transition: color 0.15s ease, border-color 0.15s ease;
 }
 
@@ -20,3 +16,16 @@
     cursor: pointer;
 }
 
+.primary {
+    background-color: $color-primary-0;
+    color: $color-secondary-1-1;
+}
+
+.secondary {
+    border: 1px solid $color-primary-0;
+    color: $color-primary-0;
+}
+
+.normal {
+    color: $Text-Icons-Color
+}

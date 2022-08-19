@@ -1,23 +1,19 @@
 import Link from 'next/link';
-import { ButtonInterface } from './button.interface';
 import styles from './Button.module.scss';
 import { FC } from 'react';
+import { ButtonInterface } from './Button.interface';
 
 interface props {
-    children: any;
+    children?: any;
     data: ButtonInterface;
 }
 
 const Button: FC<props> = (props) => {
-    const { destiny, status, text } = props.data;
+    let { destiny, status, text } = props.data;
     return (
         <Link href={destiny}>
-            <p className={styles.button}>
-                <span>
-                    <i className={status}>
-                        {props.children}
-                    </i>
-                </span>
+            <p className={`${styles.button} ${`${styles[status]}`}`}>
+                {props.children}
                 <span>{text}</span>
             </p>
         </Link>
