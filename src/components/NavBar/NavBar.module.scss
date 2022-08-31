@@ -1,6 +1,6 @@
 @import "../../styles/colors.scss";
 .navbar {
-    background-color: $Accent-Color;
+    background: linear-gradient(to right, #8300cd, #b800c4);
     display: flex;
     justify-content: space-between;
     align-items: center;
