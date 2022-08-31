@@ -8,7 +8,7 @@ import Grid from "../components/Grid/Grid";
 //styles
 import styles from "../styles/Home.module.scss";
 //data
-import { data } from "../assets/blog.json";
+import data from "../assets/blog.json";
 
 const Home: NextPage = () => {
   return (
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
             <code className={styles.code}>pages/index.tsx</code>
           </p>
           <Grid>
-            {data.map((item, index) => (
+            {data.data.map((item, index) => (
               <Card key={index} {...item} />
             ))}
           </Grid>
