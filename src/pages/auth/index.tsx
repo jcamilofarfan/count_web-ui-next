@@ -1,18 +1,31 @@
 import { NextPage } from "next";
-import { FiLogIn } from "react-icons/fi";
-import Button from "../../components/Button/Button";
-import { callAPI } from "../../services/auth.service";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import AuthContainer from "../../components/Auth/Auth";
+
+import fields from "../../assets/Forms/login.json";
+import { login } from "../../services/auth.service";
+import * as storeMemoryService from "../../services/storeMemory.Service";
+import { MEMORY_KEYS } from "../../utils/enums/memory-keys";
+
+const onSubmit = async (data: object) => {
+    const response = await login(data);
+    if(response.detail === "Incorrect username or password" ) {
+        toast.error(response.detail, {
+            toastId: 1});
+    }else {
+        toast.success("Successfully Login", {
+            toastId: 2});
+        storeMemoryService.setLocalItemByKey(MEMORY_KEYS.TOKEN, response)
+    }
+}
 
 const Auth:NextPage= () => {
-    const getdata = async () => {
-        const data = await callAPI({username: 'username', password: 'password'});
-    }
-
     return (
-        <div>
-            <h1>Auth</h1>
-            <button onClick={getdata}>get data</button>
-        </div>
+        <main>
+            <AuthContainer fieldsArray={fields.fields} onSubmit={onSubmit} action="singin" legend="Iniciar Sesion"/>
+        </main>
     );
 }
 
