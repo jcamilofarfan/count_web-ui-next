@@ -1,0 +1,35 @@
+{
+    "fields": [
+        {
+            "id": 1,
+            "type": "text",
+            "name": "compania",
+            "required": true,
+            "label": "Compania",
+            "minLength": 4,
+            "maxLength": 20,
+            "placeholder": "Compania",
+            "errorMessage": "El nombre de la Compania solo puede contener letras y números, sin espacios. Ej. alpina_sas"
+        },
+        {
+            "id": 2,
+            "type": "password",
+            "name": "password",
+            "required": true,
+            "label": "Password",
+            "minLength": 6,
+            "maxLength": 20,
+            "placeholder": "Password",
+            "errorMessage": "Mínimo ocho caracteres, al menos una letra mayúscula, una letra minúscula y un número. Ej. Contasena2020-"
+        },
+        {
+            "id": 3,
+            "type": "email",
+            "name": "email",
+            "required": true,
+            "label": "Email",
+            "placeholder": "Email",
+            "errorMessage": "Debes ingresar un email válido. Ej. admin@empresa.com"
+        }
+    ]
+}

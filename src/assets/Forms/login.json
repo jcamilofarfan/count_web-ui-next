@@ -1,0 +1,26 @@
+{
+    "fields": [
+        {
+            "id": 1,
+            "type": "text",
+            "name": "compania",
+            "required": true,
+            "label": "Compania",
+            "minLength": 3,
+            "maxLength": 20,
+            "placeholder": "Compania",
+            "errorMessage": "El nombre de la Compania solo puede contener letras y números, sin espacios. Ej. alpina_sas"
+        },
+        {
+            "id": 2,
+            "type": "password",
+            "name": "password",
+            "required": true,
+            "label": "Password",
+            "placeholder": "Password",
+            "minLength": 6,
+            "maxLength": 20,
+            "errorMessage": "Recuerda que la contraseña debe tener al menos una mayúscula, una minúscula y un número"
+        }
+    ]
+}
