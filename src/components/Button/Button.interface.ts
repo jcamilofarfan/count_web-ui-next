@@ -1,5 +1,6 @@
 export interface ButtonInterface {
     text:string,
-    destiny: string,
+    destiny?: string,
     status: string,
+    action?: any,
 }
