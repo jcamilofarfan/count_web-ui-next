@@ -1,5 +1,3 @@
-@import "./colors.scss";
-
 .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -14,7 +12,7 @@
   display: flex;
   flex: 1;
   padding: 2rem 0;
-  border-top: 1px solid $Secondary-Text-Color;
+  border-top: 1px solid #757575;
   justify-content: center;
   align-items: center;
 }
@@ -55,7 +53,7 @@
 }
 
 .code {
-  background: $Accent-Color;
+  background: #8Bc34A;
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
@@ -70,11 +68,11 @@
 
 @media (prefers-color-scheme: dark) {
 
-  .footer {
-    border-color: $Divider-Color;
-  }
+  // .footer {
+  //   border-color: $Divider-Color;
+  // }
   .code {
-    background: $Accent-Color;
+    background: #8Bc34A;
   }
   .logo img {
     filter: invert(1);

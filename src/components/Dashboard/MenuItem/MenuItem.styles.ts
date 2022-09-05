@@ -10,10 +10,11 @@ export const MenuItemContainer = styled.a<{ depth: number }>`
   & svg {
     height: 30px;
     margin-right: 10px;
+    color: ${(props) => props.theme.colors.TextIconsColor};
   }
   &:hover {
-    background-color: ${(props) => props.theme.colors.main};
-    color: ${(props) => props.theme.colors.secondary};
+    background-color: ${(props) => props.theme.colors.PrimaryColor};
+    color: ${(props) => props.theme.colors.DividerColor};
     opacity: 0.5;
     cursor: pointer;
   }
@@ -24,7 +25,7 @@ export const MenuItemContainer = styled.a<{ depth: number }>`
     margin-left: ${({ depth }) => `${depth}rem`};
   }
   &.selected {
-    background-color: ${(props) => props.theme.colors.main};
-    color: ${(props) => props.theme.colors.textLight};
+    background-color: ${(props) => props.theme.colors.PrimaryColor};
+    color: ${(props) => props.theme.colors.AccentColor};
   }
 `;

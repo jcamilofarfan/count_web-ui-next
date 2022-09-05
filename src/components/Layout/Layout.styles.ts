@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  color: ${(props) => props.theme.colors.textDark};
+  color: ${(props) => props.theme.colors.PrimaryTextColor};
 `;
 
 export const Content = styled.div`

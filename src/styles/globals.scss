@@ -1,4 +1,3 @@
-@import "./colors.scss";
 html,
 body {
   margin: 0;
@@ -25,7 +24,7 @@ main {
     color-scheme: dark;
   }
   body {
-    color: $Primary-Text-Color;
+    color: black;
     background: white;
   }
 }

@@ -21,7 +21,10 @@ export const FormControl = styled.input`
     background-color: transparent;
     padding: 2rem;
     color: white;
-    border-color: ${(props) => props.theme.colors.secondary};
+    border: 3px solid ${(props) => props.theme.colors.AccentColor};
+    :focus {
+        border: 3px solid ${(props) => props.theme.colors.AccentColor};
+    }
     :nth-child(2) {
         margin-top: 2rem;
         border-radius: 50px 50px 0 0;
@@ -34,22 +37,23 @@ export const FormControl = styled.input`
 
 export const Button= styled.button`
     margin-top: 30px;
-    background: ${(props) => props.theme.colors.secondary};
+    background: ${(props) => props.theme.colors.AccentColor};
     padding: 0.5rem 2rem;
     border-radius: 50px;
     border: 0;
     font-size: 30px;
-    border: 2px solid ${(props) => props.theme.colors.secondary};
-    color: ${(props) => props.theme.colors.textDark};
+    border: 2px solid ${(props) => props.theme.colors.AccentColor};
+    color: ${(props) => props.theme.colors.PrimaryTextColor};
     &:hover {
         cursor: pointer;
-        background: ${(props) => props.theme.colors.main};
-        color: ${(props) => props.theme.colors.textLight};
+        background: ${(props) => props.theme.colors.LightPrimaryColor};
+        color: ${(props) => props.theme.colors.DarkPrimaryColor};
+        border: 2px solid ${(props) => props.theme.colors.LightPrimaryColor};
     }
     &:disabled{
-        background: ${(props) => props.theme.colors.greyBg};
-        color: ${(props) => props.theme.colors.textDark};
-        border: 2px solid ${(props) => props.theme.colors.greyBg};
+        background: ${(props) => props.theme.colors.DividerColor};
+        color: ${(props) => props.theme.colors.PrimaryTextColor};
+        border: 2px solid ${(props) => props.theme.colors.DividerColor};
         cursor : default;
     }
 `

@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
   display: flex;
-  background: ${props => props.theme.colors.main};
+  background: ${props => props.theme.colors.PrimaryColor};
   height: 50px;
   align-items: center;
   justify-content: center;
-  color: ${props => props.theme.colors.secondary};
+  color: ${props => props.theme.colors.DividerColor};
 `;

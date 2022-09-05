@@ -1,10 +1,9 @@
-@import "../../../styles/colors.scss";
 .card {
     padding: 1.5rem;
     text-align: left;
     color: inherit;
     text-decoration: none;
-    border: 1px solid $Secondary-Text-Color;
+    border: 1px solid #757575;
     border-radius: 10px;
     transition: color 0.15s ease, border-color 0.15s ease;
     overflow: hidden;
@@ -13,8 +12,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-color: $Divider-Color;
-border-color: $Divider-Color;
+color: #BDBDBD;
+border-color: #BDBDBD;
 }
 
 .card h2 {
@@ -30,6 +29,6 @@ line-height: 1.5;
 
 @media (prefers-color-scheme: dark) {
 .card{
-    border-color: $Divider-Color;
+    border-color: #BDBDBD;
 }
 }

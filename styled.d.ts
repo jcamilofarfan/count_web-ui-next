@@ -1,13 +1,16 @@
-import "styled-components";
+import "styledcomponents";
 
-declare module "styled-components" {
+declare module "styledcomponents" {
   export interface DefaultTheme {
     colors: {
-      main: string;
-      secondary: string;
-      textDark: string;
-      textLight: string;
-      greyBg: string;
+      DarkPrimaryColor?: string;
+      LightPrimaryColor?: string;
+      PrimaryColor?: string;
+      TextIconsColor: string;
+      AccentColor: string;
+      PrimaryTextColor: string;
+      SecondaryTextColor: string;
+      DividerColor: string;
     };
   }
 }

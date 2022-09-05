@@ -16,8 +16,8 @@ export const Box = styled.div`
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: ${(props) => props.theme.colors.main};
-    COLOR: ${(props) => props.theme.colors.secondary};
+    background-color: ${(props) => props.theme.colors.PrimaryColor};
+    color: ${(props) => props.theme.colors.PrimaryTextColor};
     box-shadow: 15px 15px 55px rgb(0 0 0);
     backdrop-filter: blur(14px);
     border-radius: 40px;
