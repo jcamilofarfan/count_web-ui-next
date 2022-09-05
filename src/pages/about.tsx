@@ -1,6 +1,6 @@
-import { NextPage } from "next";
+import { NextPageWhithLayout } from "../types/NextPageWhithLayout";
 
-const About:NextPage = () => {
+const About:NextPageWhithLayout = () => {
     return (
         <div>
         <h1>About</h1>
@@ -8,4 +8,5 @@ const About:NextPage = () => {
         </div>
     );
 }
+About.layout = "Dashboard"
 export default About;

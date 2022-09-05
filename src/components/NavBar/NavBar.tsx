@@ -1,7 +1,7 @@
 import { FiLogIn } from "react-icons/fi";
 import { SiAboutdotme } from "react-icons/si";
-import Button from "../Button/Button";
-import Img from "../Img/Img";
+import Button from "./Button/Button";
+import Img from "./Img/Img";
 import styles from './NavBar.module.scss'
 
 const NavBar= (props: any) => {

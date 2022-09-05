@@ -1,4 +1,4 @@
-import { CardInterface } from '../../interface/Card.interface';
+import { CardInterface } from '../../../interface/Card.interface';
 import styles from './Card.module.scss';
 
 const Card= (props: CardInterface) => {

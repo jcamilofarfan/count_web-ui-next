@@ -3,8 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 //components
 import NavBar from "../components/NavBar/NavBar";
-import Card from "../components/Card/Card";
-import Grid from "../components/Grid/Grid";
+import Card from "../components/Landing/Card/Card";
+import Grid from "../components/Landing/Grid/Grid";
 //styles
 import styles from "../styles/Home.module.scss";
 //data

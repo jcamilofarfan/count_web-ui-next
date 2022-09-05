@@ -1,5 +1,6 @@
-import { NextPage } from "next";
-import { ToastContainer, toast } from 'react-toastify';
+import { NextPageWhithLayout } from "../../types/NextPageWhithLayout";
+
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import AuthContainer from "../../components/Auth/Auth";
@@ -8,6 +9,7 @@ import fields from "../../assets/Forms/login.json";
 import { login } from "../../services/auth.service";
 import * as storeMemoryService from "../../services/storeMemory.Service";
 import { MEMORY_KEYS } from "../../utils/enums/memory-keys";
+import FormAuth from "../../components/Auth/Form/Form";
 
 const onSubmit = async (data: object) => {
     const response = await login(data);
@@ -21,12 +23,19 @@ const onSubmit = async (data: object) => {
     }
 }
 
-const Auth:NextPage= () => {
+// {/* <AuthContainer fieldsArray={fields.fields} onSubmit={onSubmit} action="singin" legend="Iniciar Sesion"/> */}
+const Auth:NextPageWhithLayout= () => {
     return (
-        <main>
-            <AuthContainer fieldsArray={fields.fields} onSubmit={onSubmit} action="singin" legend="Iniciar Sesion"/>
-        </main>
+        <AuthContainer title="Inicio de Sesion">
+            <FormAuth
+                fields={fields.fields}
+                onSubmitFunction={onSubmit}
+                action="singin"
+                legend="Iniciar Sesion"
+            />
+        </AuthContainer>
     );
 }
 
+Auth.layout = "Auth";
 export default Auth;

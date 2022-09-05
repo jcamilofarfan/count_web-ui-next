@@ -1,10 +1,10 @@
 import { useForm } from "react-hook-form";
-import styles from "./Form.module.scss";
+import { Form, Title, FormControl, Button } from './Form.styled';
 
-import { FieldsInterface } from "../../interface/Fields.interface";
+import { FieldsInterface } from "../../../interface/Fields.interface";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { validateInput , getRegex } from "../../utils/regex.util";
+import { validateInput , getRegex } from "../../../utils/regex.util";
 import { useState } from "react";
 
 interface props {
@@ -56,16 +56,14 @@ const FormAuth = ({ fields, onSubmitFunction, action, legend }: props) => {
   };
 
   return (
-    <div className={styles.form}>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <h3 className={styles.form__title}>
+    <div>
+      <Form onSubmit={handleSubmit(onSubmit)}>
+        <Title>
           {legend}
-        </h3>
+        </Title>
         {fields.map((field) => (
-            // {errors[field.name] && <p>{errors[field.name]}</p>
-            <input
+            <FormControl
               key={field.name}
-              className={styles.form__control}
               type={field.type}
               placeholder={field.placeholder}
               {...register(field.name, {
@@ -77,10 +75,10 @@ const FormAuth = ({ fields, onSubmitFunction, action, legend }: props) => {
               })}
             />
           ))}
-        <button disabled={!isValid}  className={styles.form__submit_btn} >
+        <Button disabled={!isValid}>
           {isSubmitting ? "Enviando..." : action ==="singin"? "Login":"Registro"}
-        </button>
-      </form>
+        </Button>
+      </Form>
     </div>
   );
 };

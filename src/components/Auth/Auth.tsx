@@ -1,40 +1,35 @@
 /* eslint-disable @next/next/no-img-element */
+import Head from "next/head";
 import { ToastContainer } from "react-toastify";
-import { FieldsInterface } from "../../interface/Fields.interface";
-import FormAuth from "../Form/Form";
+import { ContainerProps } from "../../types/ContainerProps";
 import styles from "./auth.module.scss";
+import { Container, Box, Left, Padding, Image, Right } from './Auth.styles';
 
-interface props {
-  fieldsArray: FieldsInterface[];
-  onSubmit: (data: object) => void;
-  action: string;
-  legend: string
-}
-
-const AuthContainer = ({ fieldsArray, onSubmit, action, legend }: props) => {
+const AuthContainer = ({title, children }: ContainerProps) => {
   return (
-    <div className={styles.container}>
-      <div className={styles.container__box}>
-        <div className={styles.container__left}>
-          <div className={styles.container__padding}>
-            <img
-              src="/img/20944201.jpg"
-              alt="Image by vectorjuice"
-              className={styles.container__image}
-            />
-          </div>
-        </div>
-        <div className={styles.container__right}>
-          <FormAuth
-            fields={fieldsArray}
-            onSubmitFunction={onSubmit}
-            action={action}
-            legend={legend}
-          />
-        </div>
-      </div>
-      <ToastContainer />
-    </div>
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content="Nextjs Dashboard Layout" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Container>
+        <Box>
+          <Left>
+            <Padding>
+              <Image
+                src="/img/20944201.jpg"
+                alt="Image by vectorjuice"
+              />
+            </Padding>
+          </Left>
+          <Right>
+            {children}
+          </Right>
+        </Box>
+        <ToastContainer />
+      </Container>
+    </>
   );
 };
 
