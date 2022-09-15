@@ -1,7 +1,6 @@
 import { NextPageWhithLayout } from "../../types/NextPageWhithLayout";
 import Container from "../../components/Dashboard/Container/index";
 
-
 const IndexDashBoard:NextPageWhithLayout = () => {
     return (
         <Container title="Dashboard">

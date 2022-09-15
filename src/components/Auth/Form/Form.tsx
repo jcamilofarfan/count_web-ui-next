@@ -24,8 +24,8 @@ const FormAuth = ({ fields, onSubmitFunction, action, legend }: props) => {
     formState: { isSubmitting, errors},
   } = useForm();
 
-  const onSubmit = async (data: any) => {
-    await onSubmitFunction(data);
+  const onSubmit = (data: any) => {
+    onSubmitFunction(data);
   };
 
   const getRegExp = (data: string) => {
