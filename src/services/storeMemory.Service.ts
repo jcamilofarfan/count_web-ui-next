@@ -21,7 +21,6 @@ export const getSessionItemByKey = (key:MEMORY_KEYS) =>{
 }
 
 export const getLocalItemByKey = (key: MEMORY_KEYS) => {
-    console.log("export const getLocalItemByKey = (key: MEMORY_KEYS)")
     try {
         return cryptoService.decrypt(localStorage.getItem(btoa(key))!)
     } catch (e) {

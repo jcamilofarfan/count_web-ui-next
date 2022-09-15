@@ -9,7 +9,6 @@ export const encrypt = (data: any)=> {
 }
 
 export const decrypt = (cipherText:string) => {
-    console.log("export const decrypt = (cipherText:string)")
     const bytes = CryptoJs.AES.decrypt(cipherText, key);
     return parseItem(bytes.toString(CryptoJs.enc.Utf8))
 }
