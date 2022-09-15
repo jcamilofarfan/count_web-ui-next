@@ -3,7 +3,7 @@
         {
             "id": 1,
             "type": "text",
-            "name": "compania",
+            "name": "username",
             "required": true,
             "label": "Compania",
             "minLength": 3,

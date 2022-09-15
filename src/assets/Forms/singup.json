@@ -3,7 +3,7 @@
         {
             "id": 1,
             "type": "text",
-            "name": "compania",
+            "name": "username",
             "required": true,
             "label": "Compania",
             "minLength": 4,
@@ -28,6 +28,8 @@
             "name": "email",
             "required": true,
             "label": "Email",
+            "minLength": 6,
+            "maxLength": 50,
             "placeholder": "Email",
             "errorMessage": "Debes ingresar un email válido. Ej. admin@empresa.com"
         }
