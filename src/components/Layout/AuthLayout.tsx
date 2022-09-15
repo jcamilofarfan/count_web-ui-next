@@ -1,24 +1,12 @@
-// import { useState } from "react";
-import { Container, Content, PageContainer } from "./Layout.styles";
+import { LayoutProps } from "../../types/LayoutProps";
+import { Container, Content } from "./Layout.styles";
 
-type Props = {
-    children: React.ReactNode,
-}
-
-export default function LayoutDashBoard({children}: Props) {
-    // const [isOpened, setIsOpened] = useState(false);
-    // const toggleDrawer = () => {
-    //     setIsOpened((prev) => !prev);
-    // }
+export default function LayoutDashBoard({children}: LayoutProps) {
     return (
-        <>
-            <Container>
-                    <Content>
-                        {/* <PageContainer> */}
-                            {children}
-                            {/* </PageContainer> */}
-                    </Content>
-            </Container>
-        </>
+        <Container>
+            <Content>
+                {children}
+            </Content>
+        </Container>
     )
 }

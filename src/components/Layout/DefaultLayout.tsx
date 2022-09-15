@@ -1,7 +1,6 @@
-type Props = {
-    children: React.ReactNode,
-}
-export default function LayoutDefault({children}: Props){
+import { LayoutProps } from "../../types/LayoutProps"
+
+export default function LayoutDefault({children}: LayoutProps){
     return (
         <div>
             {children}
